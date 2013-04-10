@@ -74,3 +74,6 @@ export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h \[\033[00;34m\]{ 
 
 # add to ~/.bash_profile, and close/reopen a shell.  Will autocomplete any hosts found in known_hosts.
 complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+
+# Add the android SDK tools to the path, if it exists
+[[ -d "$HOME/Library/Developer/Xamarin/android-sdk-mac_x86" ]] && PATH=${PATH}:Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/:Library/Developer/Xamarin/android-sdk-mac_x86/tools/
