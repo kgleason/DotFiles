@@ -48,6 +48,10 @@ alias grep='grep --color=auto'
 # usage: hide && command_to_be_hidden
 alias hide='history -d $((HISTCMD-1))'
 
+# An alias to generate a version using the version scheme from work:
+#YYYY.Q.MM.<Build>
+alias version='echo $(date +%Y.$(((($(date +%-m)-1)/3)+1)).%m)'
+
 # proxy tunnel
 #alias proxy='ssh -D XXXX -p XXXX USER@DOMAIN'
 # ssh home
