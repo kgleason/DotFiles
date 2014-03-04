@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-source bash-colors
+source ~/.bash_profile.d/bash-colors
 
 #Save the default
 PS1_OLD=${PS1}
 
 #Read in some git stuff
-source git-prompt
+source ~/.bash_profile.d/git-prompt
 
 PS1="\[$Yellow\]\w\[\033[m\]\[$IPurple\]\$(__git_ps1)\[$Blue\]\$ \[$IGreen\]"
