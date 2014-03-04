@@ -28,3 +28,5 @@ do
 	
 	cp -r ${d} ~/.${d}
 done
+
+source ~/.bash_profile
