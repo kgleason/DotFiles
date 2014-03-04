@@ -6,8 +6,13 @@
 
 # git commamands simplified
 alias gst='git status'
+alias gpll='git pull'
+alias gpsh='git push'
+alias gpom='git push origin master'
+alias gf='git fetch'
+alias grst='git fecth && git reset --hard'
 alias gco='git checkout'
-alias gci='git commit'
+alias gct='git commit'
 alias grb='git rebase'
 alias gbr='git branch'
 alias gadd='git add'
