@@ -1,7 +1,7 @@
 DotFiles
 ========
 
-My . files from my $HOME
+Some of the more important dot files from my homedirectory.
+I've removed the dots from the names so that they do not thump any existing files.
 
-
-I know that I should put the stuff in .bash_profile in .profile. Someday.
+I've also split my .bash_profile out into a .bash_profile.d directory. Makes it easier to find things when I want to tweak them.
