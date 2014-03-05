@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+MYARCH=$(uname)
 
-# git command autocompletion script
-if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
+if [ "X${MYARCH}" == "XDarwin" ] && [ -d $(brew --prefix)/etc/bash_completion.d ]; then
 	. $(brew --prefix)/etc/bash_completion.d/*
 	PATH=/usr/local/bin:${PATH}
 fi
