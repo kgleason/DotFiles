@@ -43,7 +43,7 @@
 [merge]
 	tool = Kaleidoscope
 [push]
-	default = simple
+	default = matching
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
