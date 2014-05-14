@@ -1,6 +1,6 @@
 [user]
-	name = Kirk gleason
-	email = kgleason@bloommg.com
+	name = %%GITNAME%%
+	email = %%GITEMAILADDRESS%%
 
 [core]
 	excludesfile = /Users/kirk/.gitignore_global
