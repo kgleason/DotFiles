@@ -20,7 +20,7 @@ read PAUSE
 cp ~/.gitconfig ~/.gitconfig.${MYDATE}.orig
 
 # Use sed to change out the place holders for real values.
-sed 's/%%GITNAME%%/${GITNAME}' gitconfig | sed 's/%%GITEMAILADDRESS%%/${GITEMAILADDRESS}' > ~/.gitconfig
+sed "s/%%GITNAME%%/${GITNAME}/" gitconfig | sed "s/%%GITEMAILADDRESS%%/${GITEMAILADDRESS}/" > ~/.gitconfig
 
 #Loop through and process everything
 for f in bash_profile bashrc gitignore_global gvimrc
@@ -30,7 +30,7 @@ do
 		cp ~/.${f} ~/.${f}.${MYDATE}.orig
 		rm -f ~/.${f}
 	fi
-	
+
 	cp ${f} ~/.${f}
 done
 
@@ -41,7 +41,7 @@ do
 		cp -r ~/.${d} ~/.${d}.${MYDATE}.orig
 		rm -rf ~/.${d}
 	fi
-	
+
 	cp -r ${d} ~/.${d}
 done
 
