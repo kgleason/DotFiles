@@ -16,8 +16,12 @@ read GITEMAILADDRESS
 echo "I am about to make backups of and replace some of your dotfiles. Press <Ctrl>+C to abort now. Enter to continue."
 read PAUSE
 
-# Treat the git config file differntly from everything else.
-cp ~/.gitconfig ~/.gitconfig.${MYDATE}.orig
+if [ -e ~/.gitconfig ]
+then
+	# Treat the git config file differntly from everything else.
+	cp ~/.gitconfig ~/.gitconfig.${MYDATE}.orig
+	rm -f ~/.gitconfig
+fi
 
 # Use sed to change out the place holders for real values.
 sed 's/%%GITNAME%%/${GITNAME}' gitconfig | sed 's/%%GITEMAILADDRESS%%/${GITEMAILADDRESS}' > ~/.gitconfig
@@ -30,7 +34,7 @@ do
 		cp ~/.${f} ~/.${f}.${MYDATE}.orig
 		rm -f ~/.${f}
 	fi
-	
+
 	cp ${f} ~/.${f}
 done
 
@@ -41,7 +45,7 @@ do
 		cp -r ~/.${d} ~/.${d}.${MYDATE}.orig
 		rm -rf ~/.${d}
 	fi
-	
+
 	cp -r ${d} ~/.${d}
 done
 
