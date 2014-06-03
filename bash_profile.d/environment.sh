@@ -8,7 +8,12 @@
 [[ -d "$HOME/bin" ]] && PATH=${PATH}:~/bin
 
 # Add some ruby environmental stuff
-eval "$(rbenv init -)"
+which rbenv 2>&1
+RBENVX=$?
+if [ ${RBENVX} -eq 0 ]
+then
+  eval "$(rbenv init -)"
+fi
 
 # And fix the paths for homebrew to be happy
 declare -x HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
