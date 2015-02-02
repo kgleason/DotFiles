@@ -66,3 +66,5 @@ alias reload='source ~/.profile'
 
 # open MacVim instead of vim
 #alias vim=/usr/local/bin/mvim
+
+test "$(uname)" = "Linux" && alias bvpn='sudo vpnc-connect --enable-1des BloomVPN'
