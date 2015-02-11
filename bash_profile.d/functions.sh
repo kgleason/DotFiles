@@ -1,3 +1,5 @@
+# I dig this dd function, but I didn't write it.
+# I found it here: http://askubuntu.com/questions/215505/how-do-you-monitor-the-progress-of-dd
 dd()
 {
     local dd=$(which dd); [ "$dd" ] || {
