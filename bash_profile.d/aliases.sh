@@ -36,11 +36,9 @@ alias .....='cd ../../../..'
 alias lsdot=" ls -ld .??*"
 
 # simple ip
-alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | sed "s/  / /g" | awk "{ print \$6}") | grep "inet " | awk "{ print \$2 }"'
-# more details
-alias ip1="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ &amp;&amp; print $1'"
+alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | rev | cut -d" " -f1 | rev) | grep "inet " | cut -d" " -f2'
 # external ip
-alias ip2="curl -s http://www.showmyip.com/simple/ | awk '{print $1}'"
+alias pub_ip="echo $(curl -s http://bot.whatismyipaddress.com)"
 
 # grep with color
 alias grep='grep --color=auto'
