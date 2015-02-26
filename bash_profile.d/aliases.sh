@@ -68,3 +68,5 @@ alias reload='source ~/.profile'
 #alias vim=/usr/local/bin/mvim
 
 test "$(uname)" = "Linux" && alias bvpn='sudo vpnc-connect --enable-1des BloomVPN'
+
+alias pgress='postgres -D /usr/local/var/postgres'
