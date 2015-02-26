@@ -19,7 +19,7 @@ read PAUSE
 if [ -e ~/.gitconfig ]
 then
 	# Treat the git config file differntly from everything else.
-	cp ~/.gitconfig ~/.gitconfig.${MYDATE}.orig
+	cp ~/.gitconfig ~/.gitconfig.orig
 	rm -f ~/.gitconfig
 fi
 
@@ -31,7 +31,7 @@ for f in bash_profile bashrc gitignore_global gvimrc
 do
 	if [ -e ~/.${f} ]
 	then
-		cp ~/.${f} ~/.${f}.${MYDATE}.orig
+		cp ~/.${f} ~/.${f}.orig
 		rm -f ~/.${f}
 	fi
 
@@ -42,7 +42,7 @@ for d in bash_profile.d vim
 do
 	if [ -d ~/.${d} ]
 	then
-		cp -r ~/.${d} ~/.${d}.${MYDATE}.orig
+		cp -r ~/.${d} ~/.${d}.orig
 		rm -rf ~/.${d}
 	fi
 
