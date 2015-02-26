@@ -20,5 +20,7 @@ fi
 #    -- * means match the previous pattern 0 or more times
 #  * \] the closing bracket
 # So it will match on a [] pair, grab & remember the text in the middle.
-#  * \1 will take the first case of remembered text, and put it back into the stream. 
+#  * \1 will take the first case of remembered text, and put it back into the stream.
 complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | sed -e 's/\[\([^]]*\)\]/\1/g' | sort | uniq`;)" ssh
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | sed -e 's/\[\([^]]*\)\]/\1/g' | sort | uniq`;)" sftp
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | sed -e 's/\[\([^]]*\)\]/\1/g' | sort | uniq`;)" scp
