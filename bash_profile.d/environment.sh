@@ -9,9 +9,9 @@
 
 # Add some ruby environmental stuff
 export RBENV_ROOT=/usr/local/var/rbenv
-which rbenv 2>&1
-RBENVX=$?
-if [ ${RBENVX} -eq 0 ]
+#which rbenv 2>&1 >> /dev/null
+#RBENVX=$?
+if [ "X$(which rbenv)" != "X" ]
 then
   eval "$(rbenv init -)"
 fi
