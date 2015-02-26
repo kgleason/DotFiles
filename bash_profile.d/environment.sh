@@ -8,6 +8,7 @@
 [[ -d "$HOME/bin" ]] && PATH=${PATH}:~/bin
 
 # Add some ruby environmental stuff
+export RBENV_ROOT=/usr/local/var/rbenv
 which rbenv 2>&1
 RBENVX=$?
 if [ ${RBENVX} -eq 0 ]
