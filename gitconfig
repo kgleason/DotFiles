@@ -4,8 +4,9 @@
 
 [core]
 	excludesfile = /Users/kirk/.gitignore_global
-	
-[alias] 
+	pager = less -r
+
+[alias]
 	st = status
 	co = checkout
 	ci = commit
@@ -46,7 +47,7 @@
 	default = matching
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
