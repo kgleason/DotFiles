@@ -36,7 +36,7 @@ alias .....='cd ../../../..'
 alias lsdot=" ls -ld .??*"
 
 # simple ip
-alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | rev | cut -d" " -f1 | rev | sort | uniq) | grep "inet " | cut -d" " -f2'
+#alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | rev | cut -d" " -f1 | rev | sort | uniq) | grep "inet " | cut -d" " -f2'
 # external ip
 alias pub_ip="echo $(curl -s http://bot.whatismyipaddress.com)"
 
