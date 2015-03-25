@@ -36,7 +36,7 @@ alias .....='cd ../../../..'
 alias lsdot=" ls -ld .??*"
 
 # simple ip
-alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | rev | cut -d" " -f1 | rev) | grep "inet " | cut -d" " -f2'
+alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | rev | cut -d" " -f1 | rev | sort | uniq) | grep "inet " | cut -d" " -f2'
 # external ip
 alias pub_ip="echo $(curl -s http://bot.whatismyipaddress.com)"
 
@@ -52,9 +52,9 @@ alias hide='history -d $((HISTCMD-1))'
 alias version='echo $(date +%Y.$(((($(date +%-m)-1)/3)+1)).%m)'
 
 # proxy tunnel
-alias proxy='ssh -D 3128 -p 5320 kirk@71.201.30.223'
+alias proxy='ssh -D 3128 -p 5309 kirk@home.kirkg.us'
 # ssh home
-alias sshome='ssh -p 5320 kirk@71.201.30.223'
+alias sshome='ssh -p 5309 kirk@home.kirkg.us'
 
 # processes
 #alias ps='ps -ax'
