@@ -11,7 +11,7 @@
 export RBENV_ROOT=/usr/local/var/rbenv
 #which rbenv 2>&1 >> /dev/null
 #RBENVX=$?
-if [ "X$(which rbenv)" != "X" ]
+if [ "X$(which rbenv &>/dev/null)" != "X" ]
 then
   eval "$(rbenv init -)"
 fi
