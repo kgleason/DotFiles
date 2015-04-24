@@ -68,3 +68,10 @@ alias reload='source ~/.profile'
 test "$(uname)" = "Linux" && alias bvpn='sudo vpnc-connect --enable-1des BloomVPN'
 
 alias pgress='postgres -D /usr/local/var/postgres'
+
+which thefuck &> /dev/null
+if [ $? -eq 0 ]
+then
+  alias fuck='eval $(thefuck $(fc -ln -1))'
+  alias FUCK=fuck
+fi
