@@ -60,7 +60,7 @@ alias sshome='ssh -p 5309 kirk@home.kirkg.us'
 #alias ps='ps -ax'
 
 # refresh shell
-alias reload='source ~/.profile'
+alias reload='source ~/.bash_profile'
 
 # open MacVim instead of vim
 #alias vim=/usr/local/bin/mvim
