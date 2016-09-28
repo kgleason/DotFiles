@@ -5,4 +5,5 @@ if ! pgrep -u $USER ssh-agent > /dev/null; then
 fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
 	eval $(<~/.ssh-agent-thing)
+	ssh-add
 fi
