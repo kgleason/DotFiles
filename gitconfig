@@ -5,6 +5,7 @@
 [core]
 	excludesfile = /Users/kirk/.gitignore_global
 	pager = less -r
+	editor = vim
 
 [alias]
 	st = status
