@@ -38,7 +38,7 @@ alias lsdot=" ls -ld .??*"
 # simple ip
 #alias ip='ifconfig | grep -A3 $(netstat -rn | grep UG | rev | cut -d" " -f1 | rev | sort | uniq) | grep "inet " | cut -d" " -f2'
 # external ip
-alias pub_ip="echo $(curl -s http://bot.whatismyipaddress.com)"
+#alias pub_ip="echo $(curl -s http://bot.whatismyipaddress.com)"
 
 # grep with color
 alias grep='grep --color=auto'
@@ -65,6 +65,13 @@ alias reload='source ~/.bash_profile'
 # open MacVim instead of vim
 #alias vim=/usr/local/bin/mvim
 
-test "$(uname)" = "Linux" && alias bvpn='sudo vpnc-connect --enable-1des BloomVPN'
+test "$(uname)" = "Linux" && alias bvpn='sudo vpnc --enable-1des BloomVPN'
 
 alias pgress='postgres -D /usr/local/var/postgres'
+
+which thefuck &> /dev/null
+if [ $? -eq 0 ]
+then
+  alias fuck='eval $(thefuck $(fc -ln -1))'
+  alias FUCK=fuck
+fi
