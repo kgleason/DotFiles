@@ -16,6 +16,8 @@ then
   eval "$(rbenv init -)"
 fi
 
+[[ -d $(ruby -e 'print Gem.user_dir') ]] && PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+
 # And fix the paths for homebrew to be happy
 declare -x HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
 declare -x PATH=$HOMEBREW_PATH:$PATH
