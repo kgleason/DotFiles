@@ -11,16 +11,12 @@
 export RBENV_ROOT=/usr/local/var/rbenv
 #which rbenv 2>&1 >> /dev/null
 #RBENVX=$?
-if [ "X$(which rbenv &>/dev/null)" != "X" ]
-then
-  eval "$(rbenv init -)"
-fi
+[[ -e $(which rbenv &>/dev/null) ]] && eval "$(rbenv init -)"
 
 [[ -d $(ruby -e 'print Gem.user_dir') ]] && PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
 # And fix the paths for homebrew to be happy
-declare -x HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
-declare -x PATH=$HOMEBREW_PATH:$PATH
+[[ -e $(which brew) &>/dev/null ]] && declare -x HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin; declare -x PATH=$HOMEBREW_PATH:$PATH
 
 # Keep less output on the screen
 export LESS="X"

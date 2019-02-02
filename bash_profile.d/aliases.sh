@@ -69,9 +69,4 @@ test "$(uname)" = "Linux" && alias bvpn='sudo vpnc --enable-1des BloomVPN'
 
 alias pgress='postgres -D /usr/local/var/postgres'
 
-which thefuck &> /dev/null
-if [ $? -eq 0 ]
-then
-  alias fuck='eval $(thefuck $(fc -ln -1))'
-  alias FUCK=fuck
-fi
+[[ -e $(which thefuck &> /dev/null) ]] && alias fuck='eval $(thefuck $(fc -ln -1))'; alias FUCK=fuck
