@@ -19,4 +19,5 @@ export RBENV_ROOT=/usr/local/var/rbenv
 [[ -e $(which brew) &>/dev/null ]] && declare -x HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin; declare -x PATH=$HOMEBREW_PATH:$PATH
 
 # Keep less output on the screen
-export LESS="X"
+# This seems to break a lot of things in a WSL environment, so we'll disable it
+[[ $(uname -r | grep Microsoft) ]] || export LESS="X"
