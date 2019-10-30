@@ -47,7 +47,7 @@ do
 	cp ${f} ~/.${f}
 done
 
-for d in bash_profile.d vim
+for d in bash_profile.d vim bashrc.d
 do
 	if [ -d ~/.${d} ]
 	then
